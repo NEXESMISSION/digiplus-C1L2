@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dévotion Traduction - Services Juridiques</title>
+    <!-- Use Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff;
+            color: #111;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .font-serif {
+            font-family: 'Merriweather', serif;
+        }
+
+        .dashboard-img {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .dashboard-img:hover {
+            transform: translateY(-5px);
+        }
+
+        .special-subtitle {
+            font-family: 'Dancing Script', cursive;
+            text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .menu-overlay {
+            z-index: 50;
+        }
+
+        .animated-divider {
+            width: 80%;
+            height: 5px;
+            background-color: #b91c1c;
+            border-radius: 9999px;
+            animation: line-grow 1s ease-out forwards;
+            transform: scaleX(0);
+        }
+        
+        @keyframes line-grow {
+            from {
+                transform: scaleX(0);
+            }
+            to {
+                transform: scaleX(1);
+            }
+        }
+        
+        /* Partners Section Styling */
+        .partners {
+            width: 100%;
+            padding: 60px 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        
+        /* Simplified h2 rule, relying on Tailwind for sizing/font */
+        .partners h2::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 4px;
+            background-color: #E53935;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .logo-slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+
+        .logo-slider {
+            display: inline-flex;
+            align-items: center;
+            animation: slide 60s linear infinite;
+        }
+
+        .logo-slide {
+            padding: 30px 40px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease-out;
+        }
+
+        .logo-slide img {
+            height: 90px;
+            max-width: 180px;
+            transition: filter 0.4s ease-out, opacity 0.4s ease-out;
+            filter: grayscale(100%);
+            opacity: 0.6;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .partners h2 {
+                font-size: 2rem;
+            }
+            .logo-slide {
+                padding: 15px 25px;
+            }
+            .logo-slide img {
+                height: 60px;
+            }
+        }
+        
+        @keyframes subtle-grow {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .animate-grow {
+            animation: subtle-grow 0.8s ease-in-out;
+        }
+        .no-interaction {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .legal-card-bg {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+            border-bottom: 4px solid #dc2626;
+        }
+        .legal-card-1 {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://www.marylandcriminallawyer.net/wp-content/uploads/2025/06/redaction-des-actes--678x381.webp');
+        }
+        .legal-card-2 {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://www.onlineprinters.fr/blog/wp-content/uploads/2019/02/grilles-mise-en-page.jpg');
+        }
+        .legal-card-3 {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://www.ma-biographie.info/wp-content/uploads/2018/04/confidentialite-absolue.jpg');
+        }
+        .legal-card-4 {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://www.shutterstock.com/shutterstock/videos/1091190731/thumb/1.jpg?ip=x480');
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Floating Navigation Bar -->
+    <nav class="fixed top-4 left-4 right-4 z-20 p-4 lg:p-6 flex justify-between items-center bg-white/70 shadow-lg rounded-2xl border border-gray-100 backdrop-blur-md">
+        <div class="flex items-center space-x-2">
+            <img src="https://i.ibb.co/V0nw6wxf/2025-09-01-020916-removebg-preview.png" alt="Dévotion Traduction Logo" class="h-10">
+        </div>
+        <button id="menu-button" class="text-black focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full z-50 bg-white menu-overlay transition-transform duration-300">
+        <div class="flex flex-col items-center py-20 space-y-4 text-black">
+            <button id="close-menu-button" class="absolute top-4 right-4 text-black focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <a href="#" class="hover:text-red-600 transition duration-300">Accueil</a>
+            <a href="#" class="hover:text-red-600 transition duration-300">Services</a>
+            <a href="#" class="hover:text-red-600 transition duration-300">Engagement</a>
+            <a href="#" class="hover:text-red-600 transition duration-300">Processus</a>
+            <a href="#" class="hover:text-red-600 transition duration-300">Références</a>
+            <a href="#" class="hover:text-red-600 transition duration-300">Contact</a>
+            <button class="bg-[#991b1b] hover:bg-[#7f1d1d] text-white font-semibold py-2 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
+                Devis gratuit
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Hero Content -->
+    <div class="flex flex-col lg:flex-row items-center justify-center text-center mt-24 z-10 px-4 sm:px-8 md:px-12 lg:px-24 space-y-8 lg:space-y-0 lg:space-x-8 relative">
+        <div class="w-full flex flex-col items-center justify-center text-center py-20">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold max-w-2xl lg:max-w-4xl text-black font-serif">
+                <span class="text-red-800 block">Traductions</span>
+                <span class="inline-block text-black">Juridiques, Financières et Techniques</span>
+            </h1>
+            <p class="mt-2 text-md md:text-lg max-w-xl text-black opacity-60">
+                Traducteur-interprète assermenté depuis 2004, au service des particuliers, entreprises et institutions.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
+                <button class="w-full sm:w-auto bg-[#991b1b] hover:bg-[#7f1d1d] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                    Demander un devis urgent
+                </button>
+                <button class="w-full sm:w-auto bg-white text-black font-semibold py-3 px-8 rounded-full border border-black shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                    Découvrir nos services
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Animated divider -->
+    <div class="animated-divider mx-auto my-8"></div>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <!-- MODIFIED: Title now uses Tailwind classes for consistency -->
+        <h2 class="text-4xl font-bold font-serif text-gray-900 mb-10 relative inline-block">Nos partenaires</h2>
+        <div class="logo-slider-container">
+            <div class="logo-slider">
+                <div class="logo-slide"><img src="https://b2b.tn/files/2022/06/QNB.jpg" alt="QNB"></div>
+                <div class="logo-slide"><img src="https://cdnfr.africanmanager.com/wp-content/uploads/2017/08/onu.jpg" alt="ONU"></div>
+                <div class="logo-slide"><img src="https://yt3.googleusercontent.com/ytc/AIdro_kdvFmOKvYNGVeNHYntzr3jOZSaZxh67sThYe8EKZ-qFg=s900-c-k-c0x00ffffff-no-rj" alt="La Poste Tunisienne"></div>
+                <div class="logo-slide"><img src="https://data.gov.tn/media/images/logo_SNTRI_1-removebg-preview.2e16d0ba.fill-341x308.png" alt="SNTRI"></div>
+                <div class="logo-slide"><img src="https://ween.tn/media/cache/my_thumb_fb/uploads/image/35108/35106/avatar/avatar.png" alt="UIB"></div>
+                <div class="logo-slide"><img src="https://b2b.tn/files/2022/11/BT.jpg" alt="BT"></div>
+                <div class="logo-slide"><img src="https://www.bhleasing.tn/images/bhleasing/logo/bhimmo.jpg" alt="BH Immobilière"></div>
+                <div class="logo-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjQJ2MJVq9976r_EcVURgbOJpkI30T4thDDQ&s" alt="BH Bank"></div>
+                <div class="logo-slide"><img src="https://www.recruter.tn/wp-content/uploads/2017/08/10921635_1530301213914681_963971936370104037_o.png" alt="Expertise France Tunisie"></div>
+                <div class="logo-slide"><img src="https://www.kuna.net.kw/NewsPictures/2020/12/24/7fca3b3a-8c83-47f2-8938-460054f9f665.jpg" alt="Ambassade du Koweït"></div>
+                <div class="logo-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcNSi9QBoQOa1miqe3bHY3La4dxL7V_9VGB-Q&s" alt="ABC Bank"></div>
+                <div class="logo-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDzpbWbL1gl3Sfms2o0uA4X3pzprsy7E7VnQ&s" alt="Ambassade des Émirats Arabes Unis"></div>
+                <div class="logo-slide"><img src="https://idaraty.s3.us-west-000.backblazeb2.com/logos/ministere-de-lenvironnement-et-du-developpement-durable.png" alt="Ministère de l'Environnement"></div>
+                <div class="logo-slide"><img src="https://arkam.tn/images/logo/ministere-de-la-justice.png" alt="Ministère de la Justice"></div>
+                <div class="logo-slide"><img src="https://www.sunref.tn/wp-content/uploads/2021/04/anpe.png" alt="Agence Nationale de Protection de l'Environnement"></div>
+                <div class="logo-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvjC7HwhWsxQyGpz_zrAcUCifF_Ohd6PiUnQ&s" alt="BNA"></div>
+                <div class="logo-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDxwyh6vshZA05Xsf5TkN7GkM6b80XjgPkw&s" alt="Ministère des Affaires Sociales"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <!-- MODIFIED: Increased vertical padding (py), added background color, changed to <section> tag -->
+    <section class="bg-gray-50 py-16 md:py-24 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 mx-auto md:max-w-3xl">
+                <!-- MODIFIED: Title changed to "Nos services" and standardized -->
+                <h1 class="text-4xl font-bold font-serif text-gray-900 no-interaction">
+                    Nos services
+                </h1>
+                <p class="mt-4 text-sm sm:text-base text-gray-600 no-interaction">
+                    Chaque service est conçu pour répondre précisément à vos exigences professionnelles et personnelles.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Traductions Assermentées -->
+                <div class="card relative bg-white shadow-xl rounded-3xl overflow-hidden p-8 transition-all duration-300 transform no-interaction">
+                    <div class="absolute top-0 right-0 w-1/2 h-1.5 bg-red-500 rounded-bl-xl"></div>
+                    <div class="flex items-center justify-start w-full md:flex-col md:text-center md:justify-center">
+                        <div class="flex justify-center items-center flex-shrink-0 mb-4 mr-4 md:mr-0">
+                            <img src="https://i.ibb.co/RpJjMrbQ/Untitled-design.png" alt="Icon" class="w-24 h-24 object-contain" draggable="false" style="pointer-events: none;">
+                        </div>
+                        <div class="flex flex-col items-start justify-center w-full md:items-center">
+                            <h2 class="text-xl font-semibold mb-1 text-gray-800 w-full">Traductions Assermentées</h2>
+                            <p class="text-xs text-gray-500 leading-relaxed w-full">Pour vos documents officiels (actes d'état civil, diplômes, jugements).</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: Juridique & Conformité -->
+                <div class="card relative bg-white shadow-xl rounded-3xl overflow-hidden p-8 transition-all duration-300 transform no-interaction">
+                    <div class="absolute top-0 right-0 w-1/2 h-1.5 bg-red-500 rounded-bl-xl"></div>
+                    <div class="flex items-center justify-start w-full md:flex-col md:text-center md:justify-center">
+                        <div class="flex justify-center items-center flex-shrink-0 mb-4 mr-4 md:mr-0">
+                            <img src="https://i.ibb.co/HTkGGgtJ/Untitled-design-2.png" alt="Icon" class="w-24 h-24 object-contain" draggable="false" style="pointer-events: none;">
+                        </div>
+                        <div class="flex flex-col items-start justify-center w-full md:items-center">
+                            <h2 class="text-xl font-semibold mb-1 text-gray-800 w-full">Juridique & Conformité</h2>
+                            <p class="text-xs text-gray-500 leading-relaxed w-full">Expertise en droit des sociétés et foncier (statuts, contrats, contentieux).</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: Technique & Financière -->
+                <div class="card relative bg-white shadow-xl rounded-3xl overflow-hidden p-8 transition-all duration-300 transform no-interaction">
+                    <div class="absolute top-0 right-0 w-1/2 h-1.5 bg-red-500 rounded-bl-xl"></div>
+                    <div class="flex items-center justify-start w-full md:flex-col md:text-center md:justify-center">
+                        <div class="flex justify-center items-center flex-shrink-0 mb-4 mr-4 md:mr-0">
+                            <img src="https://i.ibb.co/fYpxLFfK/Untitled-design-1.png" alt="Icon" class="w-24 h-24 object-contain" draggable="false" style="pointer-events: none;">
+                        </div>
+                        <div class="flex flex-col items-start justify-center w-full md:items-center">
+                            <h2 class="text-xl font-semibold mb-1 text-gray-800 w-full">Technique & Financière</h2>
+                            <p class="text-xs text-gray-500 leading-relaxed w-full">Rigueur pour vos documents spécialisés (bilans, appels d'offres, manuels).</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4: Interprétation -->
+                <div class="card relative bg-white shadow-xl rounded-3xl overflow-hidden p-8 transition-all duration-300 transform no-interaction">
+                    <div class="absolute top-0 right-0 w-1/2 h-1.5 bg-red-500 rounded-bl-xl"></div>
+                    <div class="flex items-center justify-start w-full md:flex-col md:text-center md:justify-center">
+                        <div class="flex justify-center items-center flex-shrink-0 mb-4 mr-4 md:mr-0">
+                            <img src="https://i.ibb.co/gb3bFYfw/Untitled-design-3.png" alt="Icon" class="w-24 h-24 object-contain" draggable="false" style="pointer-events: none;">
+                        </div>
+                        <div class="flex flex-col items-start justify-center w-full md:items-center">
+                            <h2 class="text-xl font-semibold mb-1 text-gray-800 w-full">Interprétation</h2>
+                            <p class="text-xs text-gray-500 leading-relaxed w-full">Missions de liaison et consécutive pour vos réunions, audiences et missions.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5: Urgence & Express -->
+                <div class="card relative bg-white shadow-xl rounded-3xl overflow-hidden p-8 transition-all duration-300 transform no-interaction">
+                    <div class="absolute top-0 right-0 w-1/2 h-1.5 bg-red-500 rounded-bl-xl"></div>
+                    <div class="flex items-center justify-start w-full md:flex-col md:text-center md:justify-center">
+                        <div class="flex justify-center items-center flex-shrink-0 mb-4 mr-4 md:mr-0">
+                            <img src="https://i.ibb.co/1HsBTqx/Untitled-design.jpg" alt="Icon" class="w-24 h-24 object-contain" draggable="false" style="pointer-events: none;">
+                        </div>
+                        <div class="flex flex-col items-start justify-center w-full md:items-center">
+                            <h2 class="text-xl font-semibold mb-1 text-gray-800 w-full">Urgence & Express</h2>
+                            <p class="text-xs text-gray-500 leading-relaxed w-full">Un circuit prioritaire pour vos délais les plus courts, soirs et week-ends.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Legal Pillars Section -->
+    <section class="bg-white py-16 md:py-24 px-4">
+        <div class="text-center mb-12">
+            <!-- MODIFIED: Title size standardized -->
+            <h1 class="max-w-xl mx-auto text-4xl font-serif font-bold text-gray-900 leading-tight mb-2">
+                Les 4 Piliers de la Qualité
+            </h1>
+            <div class="h-1 w-3/4 max-w-[200px] bg-red-600 mx-auto mb-6"></div>
+            <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+                Chaque aspect de notre travail est guidé par ces principes fondamentaux pour vous offrir le meilleur service possible.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-4 max-w-7xl mx-auto">
+            <div class="legal-card-1 legal-card-bg h-[400px] flex flex-col justify-center items-center text-center p-8 border-none shadow-lg rounded-3xl">
+                <h2 class="text-white font-serif text-4xl font-bold mb-4">Précision Juridique</h2>
+                <p class="text-white text-lg">Respect strict de la terminologie et des normes tunisiennes et internationales.</p>
+            </div>
+            <div class="legal-card-2 legal-card-bg h-[400px] flex flex-col justify-center items-center text-center p-8 border-none shadow-lg rounded-3xl">
+                <h2 class="text-white font-serif text-4xl font-bold mb-4">Mise en Page Fidèle</h2>
+                <p class="text-white text-lg">Reproduction exacte de vos documents pour un dépôt sans souci.</p>
+            </div>
+            <div class="legal-card-3 legal-card-bg h-[400px] flex flex-col justify-center items-center p-8 border-none shadow-lg rounded-3xl">
+                <h2 class="text-white font-serif text-4xl font-bold mb-4">Confidentialité Absolue</h2>
+                <p class="text-white text-lg">Traitement sécurisé des dossiers et signature de NDA sur demande.</p>
+            </div>
+            <div class="legal-card-4 legal-card-bg h-[400px] flex flex-col justify-center items-center text-center p-8 border-none shadow-lg rounded-3xl">
+                <h2 class="text-white font-serif text-4xl font-bold mb-4">Délai Garanti</h2>
+                <p class="text-white text-lg">Une gestion rigoureuse des projets pour des délais toujours respectés.</p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenuButton = document.getElementById('close-menu-button');
+
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            closeMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+
+            const slider = document.querySelector('.logo-slider');
+            const sliderContainer = document.querySelector('.logo-slider-container');
+            
+            if (!slider || !sliderContainer) return;
+
+            const MAX_SCALE = 1.4;
+            const MIN_SCALE = 1.0;
+            const EFFECT_SPREAD = 400;
+
+            const slides = Array.from(slider.children);
+            slides.forEach(slide => {
+                const clone = slide.cloneNode(true);
+                slider.appendChild(clone);
+            });
+
+            const allSlides = document.querySelectorAll('.logo-slide');
+
+            function updateLogoScales() {
+                const containerRect = sliderContainer.getBoundingClientRect();
+                const containerCenter = containerRect.left + containerRect.width / 2;
+
+                allSlides.forEach(slide => {
+                    const img = slide.querySelector('img');
+                    if (!img) return;
+                    
+                    const slideRect = slide.getBoundingClientRect();
+                    const slideCenter = slideRect.left + slideRect.width / 2;
+                    const distance = Math.abs(containerCenter - slideCenter);
+                    const scale = Math.max(MIN_SCALE, MAX_SCALE - (distance / EFFECT_SPREAD) * (MAX_SCALE - MIN_SCALE));
+                    const normalizedDistance = Math.min(distance / EFFECT_SPREAD, 1);
+                    const opacity = 1 - (normalizedDistance * 0.4);
+                    const grayscale = normalizedDistance * 100;
+
+                    slide.style.transform = `scale(${scale})`;
+                    img.style.filter = `grayscale(${grayscale}%)`;
+                    img.style.opacity = `${opacity}`;
+                });
+                requestAnimationFrame(updateLogoScales);
+            }
+            updateLogoScales();
+
+            const cards = document.querySelectorAll('.card');
+            let currentCardIndex = 0;
+            setInterval(() => {
+                cards.forEach(card => card.classList.remove('animate-grow'));
+                if (cards[currentCardIndex]) {
+                    cards[currentCardIndex].classList.add('animate-grow');
+                }
+                currentCardIndex = (currentCardIndex + 1) % cards.length;
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
