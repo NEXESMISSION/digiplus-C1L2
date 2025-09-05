@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth" style="scroll-padding-top: 100px;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,26 +74,26 @@
             <!-- Desktop Navigation -->
             <nav class="hidden sm:block">
                 <ul class="flex space-x-6">
-                    <li><a href="#" class="text-[#C1C09D] font-semibold text-xl hover:text-[#C6CB14] transition-colors">Home</a></li>
-                    <li><a href="#" class="text-[#C1C09D] font-semibold text-xl hover:text-[#C6CB14] transition-colors">Products</a></li>
-                    <li><a href="#" class="text-[#C1C09D] font-semibold text-xl hover:text-[#C6CB14] transition-colors">About Us</a></li>
-                    <li><a href="#" class="text-[#C1C09D] font-semibold text-xl hover:text-[#C6CB14] transition-colors">Contact Us</a></li>
+                    <li><a href="#home" class="text-[#C1C09D] font-semibold text-xl hover:text-[#C6CB14] transition-colors">Home</a></li>
+                    <li><a href="#products" class="text-[#C1C09D] font-semibold text-xl hover:text-[#C6CB14] transition-colors">Products</a></li>
+                    <li><a href="#awards" class="text-[#C1C09D] font-semibold text-xl hover:text-[#C6CB14] transition-colors">About Us</a></li>
+                    <li><a href="#contact" class="text-[#C1C09D] font-semibold text-xl hover:text-[#C6CB14] transition-colors">Contact Us</a></li>
                 </ul>
             </nav>
 
             <!-- Mobile Navigation -->
             <nav id="mobile-menu" class="fixed inset-0 bg-[#1D1D13] z-50 transform translate-x-full transition-transform duration-300 ease-in-out sm:hidden flex flex-col items-center justify-center space-y-8">
-                <a href="#" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Home</a>
-                <a href="#" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Products</a>
-                <a href="#" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">About Us</a>
-                <a href="#" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Contact Us</a>
+                <a href="#home" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Home</a>
+                <a href="#products" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Products</a>
+                <a href="#awards" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">About Us</a>
+                <a href="#contact" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Contact Us</a>
                 <button id="close-menu-button" class="absolute top-6 right-6 text-2xl text-[#C1C09D] hover:text-[#C6CB14] transition-colors">&times;</button>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <main class="mt-0 overflow-hidden">
+    <main id="home" class="mt-0 overflow-hidden">
         <div class="w-full relative">
             <img 
                 src="imges/gg.png" 
@@ -108,7 +108,7 @@
     </main>
 
     <!-- Olive Oil Quality Section -->
-    <div class="relative">
+    <div id="quality" class="relative">
         <!-- Background image with low opacity overlay -->
         <div class="absolute inset-0">
             <img src="https://images.theconversation.com/files/446280/original/file-20220214-25-1p2kbo4.jpg?ixlib=rb-4.1.0&rect=0%2C0%2C4288%2C2848&q=45&auto=format&w=926&fit=clip" alt="Olive oil background" class="w-full h-full object-cover">
@@ -172,7 +172,7 @@
     </div>
 
     <!-- Product Section with Background Image -->
-    <div class="relative min-h-screen bg-[url('https://cdn.shopify.com/s/files/1/0764/9466/8076/files/olives-and-olive-oil-2023-03-17-17-20-24-utc_1_1_1_1024x1024.jpg?v=1699270768')] bg-cover bg-center">
+    <div id="products" class="relative min-h-screen bg-[url('https://cdn.shopify.com/s/files/1/0764/9466/8076/files/olives-and-olive-oil-2023-03-17-17-20-24-utc_1_1_1_1024x1024.jpg?v=1699270768')] bg-cover bg-center">
         <!-- White overlay with reduced opacity -->
         <div class="absolute inset-0 bg-white/90"></div>
 
@@ -228,7 +228,7 @@
     </div>
 
     <!-- Section with background image and overlay - Awards & Recognition -->
-    <div class="relative min-h-screen bg-[url('https://cdn.shopify.com/s/files/1/0764/9466/8076/files/olives-and-olive-oil-2023-03-17-17-20-24-utc_1_1_1_1024x1024.jpg?v=1699270768')] bg-cover bg-center">
+    <div id="awards" class="relative min-h-screen bg-[url('https://cdn.shopify.com/s/files/1/0764/9466/8076/files/olives-and-olive-oil-2023-03-17-17-20-24-utc_1_1_1_1024x1024.jpg?v=1699270768')] bg-cover bg-center">
         <!-- Dark overlay with reduced opacity -->
         <div class="absolute inset-0 bg-[#1D1D13]/90"></div>
 
@@ -336,7 +336,7 @@
     </div>
 
     <!-- Contact Section -->
-    <div class="relative min-h-screen flex items-center justify-center bg-[url('https://assets.clevelandclinic.org/transform/63ea0011-b018-4e01-92be-3e6e5b0f4cfc/pouring-olive-oil-into-small-bowl-1812012898')] bg-cover bg-center">
+    <div id="contact" class="relative min-h-screen flex items-center justify-center bg-[url('https://assets.clevelandclinic.org/transform/63ea0011-b018-4e01-92be-3e6e5b0f4cfc/pouring-olive-oil-into-small-bowl-1812012898')] bg-cover bg-center">
         <!-- White overlay to ensure text readability -->
         <div class="absolute inset-0 bg-white/85"></div>
 
@@ -400,6 +400,27 @@
                 const menu = document.getElementById('mobile-menu');
                 menu.classList.remove('translate-x-0');
                 menu.classList.add('translate-x-full');
+                
+                // Add a small delay to allow the menu to close before scrolling
+                setTimeout(() => {
+                    const targetId = item.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 300);
+            });
+        });
+        
+        // Add smooth scrolling to desktop navigation
+        document.querySelectorAll('nav.hidden.sm\\:block a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>
