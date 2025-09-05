@@ -29,14 +29,65 @@
             background-color: #1D1D13;
         }
         
-        /* Reduced font sizes for all screens, especially mobile */
+        /* Consistent font sizes for all screens */
+        .text-6xl { font-size: 2.5rem; line-height: 3rem; }
+        .text-5xl { font-size: 2.25rem; line-height: 2.75rem; }
+        .text-4xl { font-size: 2rem; line-height: 2.5rem; }
+        .text-3xl { font-size: 1.75rem; line-height: 2.25rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.5rem; }
+        .text-base { font-size: 1rem; line-height: 1.25rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.125rem; }
+        
+        /* Mobile responsive sizes - slightly larger than before */
         @media (max-width: 640px) {
-            .text-3xl { font-size: 1.5rem; line-height: 1.8rem; }
-            .text-2xl { font-size: 1.25rem; line-height: 1.5rem; }
-            .text-xl { font-size: 1.125rem; line-height: 1.4rem; }
-            .text-lg { font-size: 1rem; line-height: 1.3rem; }
-            .text-base { font-size: 0.9rem; line-height: 1.2rem; }
-            .text-sm { font-size: 0.8rem; line-height: 1.1rem; }
+            .text-6xl { font-size: 2rem !important; line-height: 2.5rem !important; }
+            .text-5xl { font-size: 1.875rem !important; line-height: 2.25rem !important; }
+            .text-4xl { font-size: 1.75rem !important; line-height: 2rem !important; }
+            .text-3xl { font-size: 1.5rem !important; line-height: 1.75rem !important; }
+            .text-2xl { font-size: 1.25rem !important; line-height: 1.5rem !important; }
+            .text-xl { font-size: 1.125rem !important; line-height: 1.375rem !important; }
+            .text-lg { font-size: 1rem !important; line-height: 1.25rem !important; }
+            .text-base { font-size: 0.9rem !important; line-height: 1.2rem !important; }
+            .text-sm { font-size: 0.8rem !important; line-height: 1rem !important; }
+            
+            /* Consistent heading styles */
+            h1.font-serif-custom {
+                font-size: 1.75rem !important;
+                line-height: 2.25rem !important;
+                font-weight: bold;
+            }
+            
+            /* Allow wrapping for section titles but keep main title nowrap */
+            h1.font-serif-custom.break-words {
+                white-space: normal !important;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                hyphens: auto;
+            }
+            
+            h1.font-serif-custom.whitespace-nowrap {
+                white-space: nowrap !important;
+            }
+            
+            h2.font-serif-custom, h3.font-serif-custom.text-4xl {
+                font-size: 1.75rem !important;
+                line-height: 2rem !important;
+                font-weight: bold;
+            }
+            
+            h3.font-serif-custom {
+                font-size: 1.5rem !important;
+                line-height: 1.75rem !important;
+                font-weight: bold;
+            }
+            
+            h4 {
+                font-size: 1.25rem !important;
+                line-height: 1.5rem !important;
+                font-weight: semibold;
+            }
         }
         
         /* Contact section styles */
@@ -111,8 +162,10 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            align-items: center;
             width: 2rem;
             height: 2rem;
+            margin: 0 auto;
         }
         .burger-bar {
             width: 100%;
@@ -138,32 +191,32 @@
 
     <!-- Header Section -->
     <header class="bg-[#1D1D13] py-12 relative">
-        <img src="https://i.ibb.co/cKM0qzHh/3b54656e-a9e3-4e45-9606-e29b598b5bdf-removebg-preview-1.png" alt="Company Logo" class="absolute top-8 left-4 sm:left-8 h-16 sm:h-32 z-10">
+        <img src="https://i.ibb.co/KpVsVFrL/gg-logo.png" alt="Company Logo" class="absolute top-8 left-4 sm:left-8 h-16 sm:h-32 z-10">
         <div class="container mx-auto flex justify-center items-center relative">
             <!-- Mobile Menu Button -->
-            <div class="sm:hidden absolute right-6 top-1/2 -translate-y-1/2">
+            <div class="sm:hidden absolute right-6 top-1/2 -translate-y-1/2 flex items-center justify-center">
                 <button id="mobile-menu-button" class="burger-menu-icon">
-                    <div class="burger-bar"></div>
-                    <div class="burger-bar"></div>
-                    <div class="burger-bar"></div>
+                    <div class="burger-bar w-full"></div>
+                    <div class="burger-bar w-full"></div>
+                    <div class="burger-bar w-full"></div>
                 </button>
             </div>
 
             <!-- Desktop Navigation -->
             <nav class="hidden sm:block">
                 <ul class="flex space-x-6">
-                    <li><a href="#home" class="text-[#C1C09D] font-semibold text-xl hover:text-[#C6CB14] transition-colors">Home</a></li>
-                    <li><a href="#products" class="text-[#C1C09D] font-semibold text-xl hover:text-[#C6CB14] transition-colors">Products</a></li>
-                    <li><a href="#about" class="text-[#C1C09D] font-semibold text-xl hover:text-[#C6CB14] transition-colors">About Us</a></li>
-                    <li><a href="#contact" class="text-[#C1C09D] font-semibold text-xl hover:text-[#C6CB14] transition-colors">Contact Us</a></li>
+                    <li><a href="#home" class="text-[#C1C09D] font-semibold text-lg hover:text-[#C6CB14] transition-colors">Home</a></li>
+                    <li><a href="#about" class="text-[#C1C09D] font-semibold text-lg hover:text-[#C6CB14] transition-colors">About Us</a></li>
+                    <li><a href="#products" class="text-[#C1C09D] font-semibold text-lg hover:text-[#C6CB14] transition-colors">Products</a></li>
+                    <li><a href="#contact" class="text-[#C1C09D] font-semibold text-lg hover:text-[#C6CB14] transition-colors">Contact Us</a></li>
                 </ul>
             </nav>
 
             <!-- Mobile Navigation -->
-            <nav id="mobile-menu" class="fixed inset-0 bg-[#1D1D13] z-50 transform translate-x-full transition-transform duration-300 ease-in-out sm:hidden flex flex-col items-center justify-center space-y-8">
+            <nav id="mobile-menu" class="fixed inset-0 bg-[#1D1D13] z-50 transform translate-x-full transition-transform duration-300 ease-in-out sm:hidden flex flex-col items-center justify-center space-y-6 text-center">
                 <a href="#home" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Home</a>
-                <a href="#products" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Products</a>
                 <a href="#about" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">About Us</a>
+                <a href="#products" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Products</a>
                 <a href="#contact" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Contact Us</a>
                 <button id="close-menu-button" class="absolute top-6 right-6 text-2xl text-[#C1C09D] hover:text-[#C6CB14] transition-colors">&times;</button>
             </nav>
@@ -210,13 +263,13 @@
 
             <!-- Text Content Column -->
             <div class="relative text-center max-w-lg mx-auto lg:mx-0">
-                <h1 class="font-serif-custom text-2xl xs:text-3xl sm:text-4xl text-gray-100 leading-tight">
+                <h1 class="font-serif-custom text-2xl xs:text-3xl sm:text-4xl text-gray-100 leading-tight whitespace-nowrap">
                     WM TRADE SOLUTION
                 </h1>
-                <h2 class="font-serif-custom text-xl xs:text-2xl sm:text-3xl text-gray-100 leading-tight mt-2">
+                <h2 class="font-serif-custom text-lg xs:text-2xl sm:text-3xl text-gray-100 leading-tight mt-2">
                     Huile d'olive ZeTna extra vierge
                 </h2>
-                <p class="mt-6 text-base sm:text-lg text-gray-300">
+                <p class="mt-6 text-base sm:text-base text-gray-300">
                     Entreprise tunisienne spécialisée dans l'exportation d'huile d'olive ZeTna extra vierge. Fidèles à une tradition millénaire, nous offrons une huile authentique, issue d'oliveraies sélectionnées et contrôlée à chaque étape.
                 </p>
                 <ul class="mt-4 text-sm sm:text-base text-gray-400 space-y-2 flex flex-col items-center">
@@ -240,7 +293,7 @@
                     </li>
                 </ul>
                 <div class="flex justify-center mt-8">
-                  <a href="#contact" class="inline-flex items-center text-base sm:text-lg text-gray-300 group">
+                  <a href="#contact" class="inline-flex items-center text-base sm:text-base text-gray-300 group">
                       <span class="flex items-center justify-center w-10 h-10 mr-4 bg-gray-800/50 rounded-full transition-all duration-300 group-hover:bg-green-400/20">
                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -251,6 +304,26 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+    
+    <!-- About Us Section -->
+    <div id="about" class="relative py-16 sm:py-24 bg-[url('https://img.bebeautiful.in/www-bebeautiful-in/content/THE%20SECRET%20TO%20SMOOTH%2C%20SILKY%20HAIR_%20OLIVE%20OIL.png')] bg-cover bg-center">
+        <!-- Background overlay -->
+        <div class="absolute inset-0 bg-[#1D1D13]/80"></div>
+        
+        <!-- Content container -->
+        <div class="relative z-10 container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-10">
+                <h2 class="font-serif-custom text-4xl sm:text-5xl font-bold text-white mb-4">À propos de nous</h2>
+            </div>
+            
+            <div class="bg-white/90 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto">
+                <h3 class="font-serif-custom text-3xl font-bold text-[#184928] mb-5">Qui sommes-nous ?</h3>
+                <p class="text-gray-700 text-base">Notre société met en valeur le terroir tunisien à travers une huile d'olive pure, naturelle et riche en arômes.</p>
+                <p class="text-gray-700 mt-3 text-base">Nous maîtrisons toute la chaîne de valeur : de la culture des olives à l'exportation, en passant par la transformation, l'analyse qualité, le conditionnement et la logistique.</p>
+                <p class="text-gray-700 mt-3 text-base">Nous travaillons exclusivement avec des producteurs locaux engagés dans une agriculture responsable et respectueuse de l'environnement. Nos procédés d'extraction à froid préservent toutes les propriétés nutritionnelles et organoleptiques de l'huile.</p>
+            </div>
         </div>
     </div>
 
@@ -264,15 +337,15 @@
             <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
                 
                 <!-- Text Content -->
-                <h1 class="font-serif-custom text-4xl sm:text-5xl text-gray-800 leading-tight">
+                <h1 class="font-serif-custom text-5xl sm:text-6xl text-[#1D1D13] leading-tight font-bold break-words">
                     Nos produits – L'huile ZeTna
                 </h1>
                 <p class="mt-6 text-lg text-gray-700">
                     ZeTna est plus qu'une huile d'olive : c'est un concentré de nature, de tradition et de savoir-faire. Notre huile est issue de variétés autochtones cultivées dans des conditions climatiques idéales.
                 </p>
-                <p class="mt-4 text-lg font-semibold text-gray-800">
+                <p class="mt-6 text-lg font-semibold text-[#1D1D13]">
                     Formats disponibles<br>
-                    250 ML / 500 ML / 1L / 5L
+                    <span class="text-2xl font-bold mt-2 block">250 ML / 500 ML / 1L / 5L</span>
                 </p>
 
                 <!-- Product Cards -->
@@ -281,29 +354,29 @@
                     <!-- ZeTna Classique Card -->
                     <div class="bg-white/80 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
                         <img src="https://dropinblog.net/34257837/files/featured/1.jpg" alt="Bouteille d'huile d'olive ZeTna Classique" class="rounded-lg w-full aspect-square object-cover mb-4">
-                        <h2 class="font-serif-custom text-2xl font-medium text-gray-800">ZeTna Classique</h2>
-                        <p class="mt-2 text-gray-600">Douce, fruitée, idéale pour tous les jours.</p>
+                        <h2 class="font-serif-custom text-3xl font-bold text-[#1D1D13]">ZeTna Classique</h2>
+                        <p class="mt-2 text-gray-600 text-base">Douce, fruitée, idéale pour tous les jours.</p>
                     </div>
 
                     <!-- ZeTna Premium Card -->
                     <div class="bg-white/80 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
                         <img src="https://cpimg.tistatic.com/10394204/b/4/Olive-Oil..jpg" alt="Bouteille d'huile d'olive ZeTna Premium" class="rounded-lg w-full aspect-square object-cover mb-4">
-                        <h2 class="font-serif-custom text-2xl font-medium text-gray-800">ZeTna Premium</h2>
-                        <p class="mt-2 text-gray-600">Robuste et piquante, pour les connaisseurs.</p>
+                        <h2 class="font-serif-custom text-3xl font-bold text-[#1D1D13]">ZeTna Premium</h2>
+                        <p class="mt-2 text-gray-600 text-base">Robuste et piquante, pour les connaisseurs.</p>
                     </div>
 
                     <!-- ZeTna Bio Card -->
                     <div class="bg-white/80 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
                         <img src="https://oleumhistriae.com/wp-content/uploads/2023/11/prva-fotka.jpg" alt="Bouteille d'huile d'olive ZeTna Bio" class="rounded-lg w-full aspect-square object-cover mb-4">
-                        <h2 class="font-serif-custom text-2xl font-medium text-gray-800">ZeTna Bio</h2>
-                        <p class="mt-2 text-gray-600">Issue de l'agriculture biologique, sans produits chimiques.</p>
+                        <h2 class="font-serif-custom text-3xl font-bold text-[#1D1D13]">ZeTna Bio</h2>
+                        <p class="mt-2 text-gray-600 text-base">Issue de l'agriculture biologique, sans produits chimiques.</p>
                     </div>
 
                 </div>
 
                 <div class="mt-12 p-6 bg-white/80 rounded-2xl shadow-lg text-left w-full">
-                    <h3 class="font-serif-custom text-2xl font-medium text-gray-800 mb-4">Nos atouts :</h3>
-                    <ul class="text-gray-700 space-y-2">
+                    <h3 class="font-serif-custom text-4xl font-bold text-[#184928] mb-5">Nos atouts :</h3>
+                    <ul class="text-gray-700 space-y-3 text-base">
                         <li>• Pressée à froid dans les 24h suivant la récolte</li>
                         <li>• Certifiée extra vierge acidité ≤ 0,8 selon les normes internationales</li>
                         <li>• Riche en polyphénols, vitamine E et antioxydants</li>
@@ -312,23 +385,17 @@
                 </div>
                 
                 <div class="mt-8 p-6 bg-white/80 rounded-2xl shadow-lg text-left w-full">
-                    <h3 class="font-serif-custom text-2xl font-medium text-gray-800 mb-4">Exportation internationale</h3>
-                    <p class="text-gray-700">Une expertise dédiée à l'export</p>
-                    <p class="text-gray-700 mt-2">ZeTna exporte l'huile d'olive tunisienne vers plus de 20 pays à travers le monde. Nous adaptons nos emballages, certifications et processus logistiques aux exigences de chaque marché.</p>
-                    <h4 class="font-medium text-gray-800 mt-4">Nos principaux marchés :</h4>
-                    <p class="text-gray-700">Europe, Asie, Amérique du Nord, Moyen-Orient</p>
+                    <h3 class="font-serif-custom text-4xl font-bold text-[#184928] mb-5">Exportation internationale</h3>
+                    <p class="text-gray-700 text-base font-medium">Une expertise dédiée à l'export</p>
+                    <p class="text-gray-700 mt-2 text-base">ZeTna exporte l'huile d'olive tunisienne vers plus de 20 pays à travers le monde. Nous adaptons nos emballages, certifications et processus logistiques aux exigences de chaque marché.</p>
+                    <h4 class="font-semibold text-[#184928] text-2xl mt-5 mb-2">Nos principaux marchés :</h4>
+                    <p class="text-gray-700 text-base">Europe, Asie, Amérique du Nord, Moyen-Orient</p>
                 </div>
                 
-                <div id="about" class="mt-8 p-6 bg-white/80 rounded-2xl shadow-lg text-left w-full">
-                    <h3 class="font-serif-custom text-2xl font-medium text-gray-800 mb-4">À propos de nous</h3>
-                    <h4 class="font-medium text-gray-800 mt-2 mb-2">Qui sommes-nous ?</h4>
-                    <p class="text-gray-700">Notre société met en valeur le terroir tunisien à travers une huile d'olive pure, naturelle et riche en arômes.</p>
-                    <p class="text-gray-700 mt-2">Nous maîtrisons toute la chaîne de valeur : de la culture des olives à l'exportation, en passant par la transformation, l'analyse qualité, le conditionnement et la logistique.</p>
-                    <p class="text-gray-700 mt-2">Nous travaillons exclusivement avec des producteurs locaux engagés dans une agriculture responsable et respectueuse de l'environnement. Nos procédés d'extraction à froid préservent toutes les propriétés nutritionnelles et organoleptiques de l'huile.</p>
-                </div>
+
                 
                 <!-- Contact Link -->
-                <a href="#contact" class="inline-flex items-center text-lg text-gray-800 mt-10 group">
+                <a href="#contact" class="inline-flex items-center text-base text-gray-800 mt-10 group">
                     <span class="flex items-center justify-center w-10 h-10 mr-4 bg-gray-200/50 rounded-full transition-all duration-300 group-hover:bg-green-400/20">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -355,10 +422,10 @@
                     =======================================
                 -->
                 <div class="w-full flex flex-col items-center text-center">
-                    <h1 class="font-serif-custom text-4xl sm:text-5xl text-gray-100 leading-tight">
+                    <h1 class="font-serif-custom text-5xl sm:text-6xl text-white leading-tight font-bold break-words">
                         Les médailles apportées par l'huile d'olive tunisienne
                     </h1>
-                    <p class="mt-6 text-lg text-gray-300">
+                    <p class="mt-6 text-base text-gray-300">
                         Chaque médaille est un témoignage de notre engagement envers la qualité.
                     </p>
 
@@ -391,7 +458,7 @@
                 </div>
 
                 <!-- Contact Link -->
-                <a href="#contact" class="inline-flex items-center text-lg text-gray-300 mt-4 group">
+                <a href="#contact" class="inline-flex items-center text-base text-gray-300 mt-4 group">
                     <span class="flex items-center justify-center w-10 h-10 mr-4 bg-gray-800/50 rounded-full transition-all duration-300 group-hover:bg-green-400/20">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -411,7 +478,7 @@
         </div>
 
         <div class="max-w-6xl mx-auto relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12 font-serif-custom">
+            <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-12 font-serif-custom">
                 Nos Certifications
             </h2>
 
@@ -428,38 +495,38 @@
                     <!-- Bio -->
                     <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                         <span class="text-green-600 text-2xl">✅</span>
-                        <p class="text-lg font-medium text-gray-700">Bio</p>
+                        <p class="text-base font-medium text-gray-700">Bio</p>
                     </div>
                     
                     <!-- ISO 22000 -->
                     <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                         <span class="text-green-600 text-2xl">✅</span>
-                        <p class="text-lg font-medium text-gray-700">ISO 22000</p>
+                        <p class="text-base font-medium text-gray-700">ISO 22000</p>
                     </div>
                     
                     <!-- Health Certificate -->
                     <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                         <span class="text-green-600 text-2xl">✅</span>
-                        <p class="text-lg font-medium text-gray-700">Health Certificate</p>
+                        <p class="text-base font-medium text-gray-700">Health Certificate</p>
                     </div>
                     
                     <!-- Certificate of Origin -->
                     <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                         <span class="text-green-600 text-2xl">✅</span>
-                        <p class="text-lg font-medium text-gray-700">Certificate of Origin</p>
+                        <p class="text-base font-medium text-gray-700">Certificate of Origin</p>
                     </div>
                     
                     <!-- EU Organic Certificate -->
                     <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                         <span class="text-green-600 text-2xl">✅</span>
-                        <p class="text-lg font-medium text-gray-700">EU Organic Certificate</p>
+                        <p class="text-base font-medium text-gray-700">EU Organic Certificate</p>
                     </div>
                 </div>
             </div>
 
             <!-- Contact Link -->
             <div class="mt-12 flex justify-center">
-                <a href="#contact" class="inline-flex items-center text-lg text-gray-300 mt-4 group">
+                <a href="#contact" class="inline-flex items-center text-base text-gray-300 mt-4 group">
                     <span class="flex items-center justify-center w-10 h-10 mr-4 bg-gray-800/50 rounded-full transition-all duration-300 group-hover:bg-green-400/20">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
