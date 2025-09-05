@@ -11,14 +11,14 @@
     <style>
         /* Custom responsive breakpoint for extra small screens */
         .xs\:text-4xl {
-            font-size: 1.875rem;
-            line-height: 2.25rem;
+            font-size: 1.5rem;
+            line-height: 1.85rem;
         }
         
         @media (min-width: 475px) {
             .xs\:text-4xl {
-                font-size: 2.25rem;
-                line-height: 2.5rem;
+                font-size: 1.85rem;
+                line-height: 2.2rem;
             }
         }
         
@@ -28,6 +28,84 @@
             padding: 0;
             background-color: #1D1D13;
         }
+        
+        /* Reduced font sizes for all screens, especially mobile */
+        @media (max-width: 640px) {
+            .text-3xl { font-size: 1.5rem; line-height: 1.8rem; }
+            .text-2xl { font-size: 1.25rem; line-height: 1.5rem; }
+            .text-xl { font-size: 1.125rem; line-height: 1.4rem; }
+            .text-lg { font-size: 1rem; line-height: 1.3rem; }
+            .text-base { font-size: 0.9rem; line-height: 1.2rem; }
+            .text-sm { font-size: 0.8rem; line-height: 1.1rem; }
+        }
+        
+        /* Contact section styles */
+        .contact-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .contact-header h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #222;
+            font-family: 'Merriweather', serif;
+        }
+        .contact-header p {
+            color: #555;
+            font-size: 16px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+        .info-box {
+            flex: 1 1 280px;
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease;
+            text-align: center;
+        }
+        .info-box:hover {
+            transform: translateY(-5px);
+        }
+        .info-box .icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        .info-box h3 {
+            margin-bottom: 8px;
+            font-size: 20px;
+            color: #222;
+        }
+        .info-box p, .info-box a {
+            margin: 0;
+            color: #444;
+            font-size: 15px;
+            text-decoration: none;
+        }
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
         .burger-menu-icon {
             cursor: pointer;
             display: flex;
@@ -133,10 +211,10 @@
             <!-- Text Content Column -->
             <div class="relative text-left max-w-lg mx-auto lg:mx-0">
                 <h1 class="font-serif-custom text-3xl xs:text-4xl sm:text-5xl text-gray-100 leading-tight">
-                    WM TRADE SOLUTION — Huile d'olive ZETNA extra vierge
+                    WM TRADE SOLUTION — Huile d'olive ZeTna extra vierge
                 </h1>
                 <p class="mt-6 text-base sm:text-lg text-gray-300">
-                    Entreprise tunisienne spécialisée dans l'exportation d'huile d'olive ZETNA extra vierge. Fidèles à une tradition millénaire, nous offrons une huile authentique, issue d'oliveraies sélectionnées et contrôlée à chaque étape.
+                    Entreprise tunisienne spécialisée dans l'exportation d'huile d'olive ZeTna extra vierge. Fidèles à une tradition millénaire, nous offrons une huile authentique, issue d'oliveraies sélectionnées et contrôlée à chaque étape.
                 </p>
                 <ul class="mt-4 text-sm sm:text-base text-gray-400 space-y-2">
                     <li class="flex items-center">
@@ -158,7 +236,7 @@
                         Export international fiable
                     </li>
                 </ul>
-                <a href="#" class="inline-flex items-center text-base sm:text-lg text-gray-300 mt-8 sm:mt-10 group">
+                <a href="#contact" class="inline-flex items-center text-base sm:text-lg text-gray-300 mt-8 sm:mt-10 group">
                     <span class="flex items-center justify-center w-10 h-10 mr-4 bg-gray-800/50 rounded-full transition-all duration-300 group-hover:bg-green-400/20">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -182,40 +260,62 @@
                 
                 <!-- Text Content -->
                 <h1 class="font-serif-custom text-4xl sm:text-5xl text-gray-800 leading-tight">
-                    Nos produits – L'huile ZETNA
+                    Nos produits – L'huile ZeTna
                 </h1>
                 <p class="mt-6 text-lg text-gray-700">
-                    ZETNA est plus qu'une huile d'olive : c'est un concentré de nature, de tradition et de savoir-faire. Notre huile est issue de variétés autochtones cultivées dans des conditions climatiques idéales.
+                    ZeTna est plus qu'une huile d'olive : c'est un concentré de nature, de tradition et de savoir-faire. Notre huile est issue de variétés autochtones cultivées dans des conditions climatiques idéales.
+                </p>
+                <p class="mt-4 text-lg font-semibold text-gray-800">
+                    Formats disponibles<br>
+                    250 ML / 500 ML / 1L / 5L
                 </p>
 
                 <!-- Product Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 w-full">
                     
-                    <!-- ZETNA Classique Card -->
+                    <!-- ZeTna Classique Card -->
                     <div class="bg-white/80 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
-                        <img src="https://dropinblog.net/34257837/files/featured/1.jpg" alt="Bouteille d'huile d'olive ZETNA Classique" class="rounded-lg w-full aspect-square object-cover mb-4">
-                        <h2 class="font-serif-custom text-2xl font-medium text-gray-800">ZETNA Classique</h2>
+                        <img src="https://dropinblog.net/34257837/files/featured/1.jpg" alt="Bouteille d'huile d'olive ZeTna Classique" class="rounded-lg w-full aspect-square object-cover mb-4">
+                        <h2 class="font-serif-custom text-2xl font-medium text-gray-800">ZeTna Classique</h2>
                         <p class="mt-2 text-gray-600">Douce, fruitée, idéale pour tous les jours.</p>
                     </div>
 
-                    <!-- ZETNA Premium Card -->
+                    <!-- ZeTna Premium Card -->
                     <div class="bg-white/80 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
-                        <img src="https://cpimg.tistatic.com/10394204/b/4/Olive-Oil..jpg" alt="Bouteille d'huile d'olive ZETNA Premium" class="rounded-lg w-full aspect-square object-cover mb-4">
-                        <h2 class="font-serif-custom text-2xl font-medium text-gray-800">ZETNA Premium</h2>
+                        <img src="https://cpimg.tistatic.com/10394204/b/4/Olive-Oil..jpg" alt="Bouteille d'huile d'olive ZeTna Premium" class="rounded-lg w-full aspect-square object-cover mb-4">
+                        <h2 class="font-serif-custom text-2xl font-medium text-gray-800">ZeTna Premium</h2>
                         <p class="mt-2 text-gray-600">Robuste et piquante, pour les connaisseurs.</p>
                     </div>
 
-                    <!-- ZETNA Bio Card -->
+                    <!-- ZeTna Bio Card -->
                     <div class="bg-white/80 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
-                        <img src="https://oleumhistriae.com/wp-content/uploads/2023/11/prva-fotka.jpg" alt="Bouteille d'huile d'olive ZETNA Bio" class="rounded-lg w-full aspect-square object-cover mb-4">
-                        <h2 class="font-serif-custom text-2xl font-medium text-gray-800">ZETNA Bio</h2>
+                        <img src="https://oleumhistriae.com/wp-content/uploads/2023/11/prva-fotka.jpg" alt="Bouteille d'huile d'olive ZeTna Bio" class="rounded-lg w-full aspect-square object-cover mb-4">
+                        <h2 class="font-serif-custom text-2xl font-medium text-gray-800">ZeTna Bio</h2>
                         <p class="mt-2 text-gray-600">Issue de l'agriculture biologique, sans produits chimiques.</p>
                     </div>
 
                 </div>
 
+                <div class="mt-12 p-6 bg-white/80 rounded-2xl shadow-lg text-left w-full">
+                    <h3 class="font-serif-custom text-2xl font-medium text-gray-800 mb-4">Nos atouts :</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• Pressée à froid dans les 24h suivant la récolte</li>
+                        <li>• Certifiée extra vierge acidité ≤ 0,8 selon les normes internationales</li>
+                        <li>• Riche en polyphénols, vitamine E et antioxydants</li>
+                        <li>• Disponibles en formats adaptés à la vente au détail ou à l'export (bouteilles en verre, bidons)</li>
+                    </ul>
+                </div>
+                
+                <div class="mt-8 p-6 bg-white/80 rounded-2xl shadow-lg text-left w-full">
+                    <h3 class="font-serif-custom text-2xl font-medium text-gray-800 mb-4">Exportation internationale</h3>
+                    <p class="text-gray-700">Une expertise dédiée à l'export</p>
+                    <p class="text-gray-700 mt-2">ZeTna exporte l'huile d'olive tunisienne vers plus de 20 pays à travers le monde. Nous adaptons nos emballages, certifications et processus logistiques aux exigences de chaque marché.</p>
+                    <h4 class="font-medium text-gray-800 mt-4">Nos principaux marchés :</h4>
+                    <p class="text-gray-700">Europe, Asie, Amérique du Nord, Moyen-Orient</p>
+                </div>
+                
                 <!-- Contact Link -->
-                <a href="#" class="inline-flex items-center text-lg text-gray-800 mt-10 group">
+                <a href="#contact" class="inline-flex items-center text-lg text-gray-800 mt-10 group">
                     <span class="flex items-center justify-center w-10 h-10 mr-4 bg-gray-200/50 rounded-full transition-all duration-300 group-hover:bg-green-400/20">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -243,7 +343,7 @@
                 -->
                 <div class="w-full flex flex-col items-center text-center">
                     <h1 class="font-serif-custom text-4xl sm:text-5xl text-gray-100 leading-tight">
-                        L'excellence de notre huile d'olive ZETNA est reconnue
+                        L'excellence de notre huile d'olive ZeTna est reconnue
                     </h1>
                     <p class="mt-6 text-lg text-gray-300">
                         Chaque médaille est un témoignage de notre engagement envers la qualité.
@@ -278,7 +378,7 @@
                 </div>
 
                 <!-- Contact Link -->
-                <a href="#" class="inline-flex items-center text-lg text-gray-300 mt-10 group">
+                <a href="#contact" class="inline-flex items-center text-lg text-gray-300 mt-4 group">
                     <span class="flex items-center justify-center w-10 h-10 mr-4 bg-gray-800/50 rounded-full transition-all duration-300 group-hover:bg-green-400/20">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -289,102 +389,107 @@
             </div>
         </div>
     </div>
-    
-    <!--
-        =======================================
-        Section: Certifications (Modern UI)
-        =======================================
-    -->
-    <div class="bg-[#1D1D13] py-16 sm:py-24">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="font-serif-custom text-4xl sm:text-5xl text-gray-100 leading-tight mb-3">
+
+    <!-- Certifications Section -->
+    <section class="w-full relative overflow-hidden py-16 px-6 md:px-20" style="background-color: #1D1D13;">
+        <!-- Background image overlay -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-15" 
+             style="background-image: url('https://www.health.com/thmb/uyXFo34rWGaJIPmPfOH4eQ20cRM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/evoo-7c819bcdd0c343a7bae114cbc9baea2f.jpg');">
+        </div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12 font-serif-custom">
                 Nos Certifications
             </h2>
-            <p class="font-serif-custom text-xl text-gray-300 italic mb-10 max-w-2xl mx-auto">
-                Garantie de la qualité et de l'authenticité de nos produits
-            </p>
-            <h3 class="font-serif-custom text-2xl text-green-400 mt-8 mb-6">
-                Certifications Internationales et Standards de Qualité
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 max-w-4xl mx-auto">
-                
-                <!-- Certification 1 -->
-                <div class="bg-green-900/80 p-6 rounded-2xl shadow-lg flex items-center space-x-4 hover:bg-green-900 transition-colors duration-300 transform hover:scale-105">
-                    <span class="text-3xl text-green-400 flex-shrink-0">✅</span>
-                    <p class="text-xl font-medium text-gray-100">Bio</p>
+
+            <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10">
+                <!-- Image on the left for desktop -->
+                <div class="flex justify-center lg:justify-start w-full lg:w-1/2">
+                    <img src="https://i.ibb.co/0R4GyzhG/4e3bbfb1-a4d3-4fd3-84a4-bc0d13f4e260.jpg"
+                        alt="Certifications background"
+                        class="w-64 md:w-80 lg:w-full max-w-md rounded-2xl object-contain">
                 </div>
 
-                <!-- Certification 2 -->
-                <div class="bg-green-900/80 p-6 rounded-2xl shadow-lg flex items-center space-x-4 hover:bg-green-900 transition-colors duration-300 transform hover:scale-105">
-                    <span class="text-3xl text-green-400 flex-shrink-0">✅</span>
-                    <p class="text-xl font-medium text-gray-100">ISO 22000</p>
+                <!-- Boxes on the right for desktop -->
+                <div class="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Bio -->
+                    <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+                        <span class="text-green-600 text-2xl">✅</span>
+                        <p class="text-lg font-medium text-gray-700">Bio</p>
+                    </div>
+                    
+                    <!-- ISO 22000 -->
+                    <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+                        <span class="text-green-600 text-2xl">✅</span>
+                        <p class="text-lg font-medium text-gray-700">ISO 22000</p>
+                    </div>
+                    
+                    <!-- Health Certificate -->
+                    <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+                        <span class="text-green-600 text-2xl">✅</span>
+                        <p class="text-lg font-medium text-gray-700">Health Certificate</p>
+                    </div>
+                    
+                    <!-- Certificate of Origin -->
+                    <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+                        <span class="text-green-600 text-2xl">✅</span>
+                        <p class="text-lg font-medium text-gray-700">Certificate of Origin</p>
+                    </div>
+                    
+                    <!-- EU Organic Certificate -->
+                    <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+                        <span class="text-green-600 text-2xl">✅</span>
+                        <p class="text-lg font-medium text-gray-700">EU Organic Certificate</p>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Certification 3 -->
-                <div class="bg-green-900/80 p-6 rounded-2xl shadow-lg flex items-center space-x-4 hover:bg-green-900 transition-colors duration-300 transform hover:scale-105">
-                    <span class="text-3xl text-green-400 flex-shrink-0">✅</span>
-                    <p class="text-xl font-medium text-gray-100">Health Certificate</p>
-                </div>
-
-                <!-- Certification 4 -->
-                <div class="bg-green-900/80 p-6 rounded-2xl shadow-lg flex items-center space-x-4 hover:bg-green-900 transition-colors duration-300 transform hover:scale-105">
-                    <span class="text-3xl text-green-400 flex-shrink-0">✅</span>
-                    <p class="text-xl font-medium text-gray-100">Certificate of Origin</p>
-                </div>
-
-                <!-- Certification 5 -->
-                <div class="bg-green-900/80 p-6 rounded-2xl shadow-lg flex items-center space-x-4 hover:bg-green-900 transition-colors duration-300 transform hover:scale-105">
-                    <span class="text-3xl text-green-400 flex-shrink-0">✅</span>
-                    <p class="text-xl font-medium text-gray-100">EU Organic Certificate</p>
-                </div>
+            <!-- Contact Link -->
+            <div class="mt-12 flex justify-center">
+                <a href="#contact" class="inline-flex items-center text-lg text-gray-300 mt-4 group">
+                    <span class="flex items-center justify-center w-10 h-10 mr-4 bg-gray-800/50 rounded-full transition-all duration-300 group-hover:bg-green-400/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </span>
+                    Contactez-nous pour découvrir nos produits.
+                </a>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Contact Section -->
-    <div id="contact" class="relative min-h-screen flex items-center justify-center bg-[url('https://assets.clevelandclinic.org/transform/63ea0011-b018-4e01-92be-3e6e5b0f4cfc/pouring-olive-oil-into-small-bowl-1812012898')] bg-cover bg-center">
-        <!-- White overlay to ensure text readability -->
-        <div class="absolute inset-0 bg-white/85"></div>
-
-        <div class="relative z-10 container mx-auto px-4 py-16 sm:py-24 text-center">
-            
-            <div class="bg-white/70 backdrop-blur-lg p-8 sm:p-12 rounded-3xl shadow-2xl max-w-4xl mx-auto">
-                <h1 class="font-serif-custom text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900">
-                    Contactez-nous
-                </h1>
-                <p class="mt-4 text-lg text-gray-700">
-                    N'hésitez pas à nous contacter pour toute question ou demande de devis. Nous sommes à votre disposition pour vous accompagner.
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    
-                    <!-- Email Card -->
-                    <div class="p-6 rounded-2xl border border-gray-200 bg-white shadow-md transition-transform transform hover:scale-105">
-                        <span class="text-4xl text-green-600">📧</span>
-                        <h2 class="mt-4 text-2xl font-semibold text-gray-900">Email</h2>
-                        <p class="mt-2 text-gray-700">contact@wm-tradion.com</p>
-                    </div>
-
-                    <!-- Phone Card -->
-                    <div class="p-6 rounded-2xl border border-gray-200 bg-white shadow-md transition-transform transform hover:scale-105">
-                        <span class="text-4xl text-green-600">📞</span>
-                        <h2 class="mt-4 text-2xl font-semibold text-gray-900">Téléphone</h2>
-                        <p class="mt-2 text-gray-700">+216 24 628 534</p>
-                    </div>
-
-                    <!-- Address Card -->
-                    <div class="p-6 rounded-2xl border border-gray-200 bg-white shadow-md transition-transform transform hover:scale-105">
-                        <span class="text-4xl text-green-600">📍</span>
-                        <h2 class="mt-4 text-2xl font-semibold text-gray-900">Adresse</h2>
-                        <p class="mt-2 text-gray-700">
-                            Bloc A — 3ème Étage, Bureau A1<br>
-                            Immeuble Henda 10, Rue l'Île de Rhodes<br>
-                            1053 Les Berges du Lac 2
-                        </p>
-                    </div>
-
+    <div id="contact" class="relative min-h-screen flex items-center justify-center bg-white">
+        <div class="relative z-10 container mx-auto px-4 py-16 sm:py-24">
+            <section class="contact-section">
+                <div class="contact-header">
+                  <h2>Contactez-nous</h2>
+                  <p>N'hésitez pas à nous contacter pour toute question ou demande de devis. Nous sommes à votre disposition pour vous accompagner.</p>
                 </div>
-            </div>
+
+                <div class="contact-info">
+                  <div class="info-box">
+                    <div class="icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:contact@wm-tradion.com">contact@wm-tradion.com</a>
+                  </div>
+                  <div class="info-box">
+                    <div class="icon">📞</div>
+                    <h3>Téléphone</h3>
+                    <a href="tel:+21624628534">+216 24 628 534</a>
+                  </div>
+                  <div class="info-box">
+                    <div class="icon">📍</div>
+                    <h3>Adresse</h3>
+                    <p>Bloc A — 3ème Étage, Bureau A1<br/>Immeuble Henda 10, Rue l'Île de Rhodes<br/>1053 Les Berges du Lac 2</p>
+                    <a href="https://www.google.com/maps/search/WM+Tradion+Les+Berges+du+Lac+2,+Tunis/@36.8560347,10.2712397,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Voir sur Google Maps</a>
+                  </div>
+                </div>
+
+                <div class="map-container">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8232079066794!2d10.2712397!3d36.8560347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd34b8e2b5c0d7%3A0x123456789abcdef!2sWM%20Tradion%2C%20Les%20Berges%20du%20Lac%202%2C%20Tunis!5e0!3m2!1sfr!2stn!4v1690000000001" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
         </div>
     </div>
 
