@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" style="scroll-padding-top: 100px;">
+<html lang="ja" class="scroll-smooth" style="scroll-padding-top: 100px;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Hero Section</title>
+    <title>レスポンシブヒーローセクション</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Note: Adding a Japanese font for better rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* Custom responsive breakpoint for extra small screens */
         .xs\:text-4xl {
@@ -23,7 +25,7 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif; /* Added Noto Sans JP */
             margin: 0;
             padding: 0;
             background-color: #1D1D13;
@@ -49,8 +51,8 @@
             .text-2xl { font-size: 1.25rem !important; line-height: 1.5rem !important; }
             .text-xl { font-size: 1.125rem !important; line-height: 1.375rem !important; }
             .text-lg { font-size: 1rem !important; line-height: 1.25rem !important; }
-            .text-base { font-size: 0.9rem !important; line-height: 1.2rem !important; }
-            .text-sm { font-size: 0.8rem !important; line-height: 1rem !important; }
+            .text-base { font-size: 0.9rem !important; line-height: 1.4rem !important; } /* Adjusted line-height for Japanese */
+            .text-sm { font-size: 0.8rem !important; line-height: 1.2rem !important; } /* Adjusted line-height for Japanese */
             
             /* Consistent heading styles */
             h1.font-serif-custom {
@@ -183,7 +185,7 @@
             transform: translateY(-9px) rotate(-45deg);
         }
         .font-serif-custom {
-            font-family: 'Merriweather', serif;
+            font-family: 'Merriweather', 'Noto Sans JP', serif;
         }
     </style>
 </head>
@@ -191,16 +193,16 @@
 
     <!-- Header Section -->
     <header class="bg-[#1D1D13] py-12 relative z-30">
-        <img src="https://i.ibb.co/0V2h7Spd/gg-logo.png" alt="Company Logo" class="absolute top-8 left-4 sm:left-8 h-16 sm:h-32 z-10">
+        <img src="https://i.ibb.co/0V2h7Spd/gg-logo.png" alt="会社のロゴ" class="absolute top-8 left-4 sm:left-8 h-16 sm:h-32 z-10">
         <div class="container mx-auto flex justify-center items-center relative">
 
             <!-- Desktop Navigation -->
             <nav class="hidden sm:block">
                 <ul class="flex space-x-6">
-                    <li><a href="#home" class="text-[#C1C09D] font-semibold text-lg hover:text-[#C6CB14] transition-colors">Home</a></li>
-                    <li><a href="#about" class="text-[#C1C09D] font-semibold text-lg hover:text-[#C6CB14] transition-colors">About Us</a></li>
-                    <li><a href="#products" class="text-[#C1C09D] font-semibold text-lg hover:text-[#C6CB14] transition-colors">Products</a></li>
-                    <li><a href="#contact" class="text-[#C1C09D] font-semibold text-lg hover:text-[#C6CB14] transition-colors">Contact Us</a></li>
+                    <li><a href="#home" class="text-[#C1C09D] font-semibold text-lg hover:text-[#C6CB14] transition-colors">ホーム</a></li>
+                    <li><a href="#about" class="text-[#C1C09D] font-semibold text-lg hover:text-[#C6CB14] transition-colors">会社概要</a></li>
+                    <li><a href="#products" class="text-[#C1C09D] font-semibold text-lg hover:text-[#C6CB14] transition-colors">製品</a></li>
+                    <li><a href="#contact" class="text-[#C1C09D] font-semibold text-lg hover:text-[#C6CB14] transition-colors">お問い合わせ</a></li>
                 </ul>
             </nav>
             
@@ -210,14 +212,14 @@
                 <!-- Language Dropdown Selector -->
                 <div class="relative">
                     <button id="language-toggle-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-white transition-colors">
-                        <span class="text-2xl">🇺🇸</span>
+                        <span class="text-2xl">🇯🇵</span>
                         <svg class="ml-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                         </svg>
                     </button>
 
                     <div id="language-menu" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden z-50" role="menu" aria-orientation="vertical" aria-labelledby="language-toggle-button">
-                        <a href="index.html" class="flex items-center px-4 py-2 text-sm text-gray-700 bg-gray-100 font-bold" role="menuitem">
+                        <a href="index.html" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
                             <span class="text-xl mr-3">🇺🇸</span> English
                         </a>
                         <a href="index-fr.html" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
@@ -226,7 +228,7 @@
                         <a href="index-de.html" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
                             <span class="text-xl mr-3">🇩🇪</span> Deutsch
                         </a>
-                        <a href="index-jp.html" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                        <a href="index-jp.html" class="flex items-center px-4 py-2 text-sm text-gray-700 bg-gray-100 font-bold" role="menuitem">
                             <span class="text-xl mr-3">🇯🇵</span> 日本語
                         </a>
                     </div>
@@ -244,10 +246,10 @@
 
             <!-- Mobile Navigation -->
             <nav id="mobile-menu" class="fixed inset-0 bg-[#1D1D13] z-40 transform translate-x-full transition-transform duration-300 ease-in-out sm:hidden flex flex-col items-center justify-center space-y-6 text-center">
-                <a href="#home" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Home</a>
-                <a href="#about" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">About Us</a>
-                <a href="#products" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Products</a>
-                <a href="#contact" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">Contact Us</a>
+                <a href="#home" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">ホーム</a>
+                <a href="#about" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">会社概要</a>
+                <a href="#products" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">製品</a>
+                <a href="#contact" class="text-[#C1C09D] font-semibold text-3xl hover:text-[#C6CB14] transition-colors">お問い合わせ</a>
                 <button id="close-menu-button" class="absolute top-6 right-6 text-2xl text-[#C1C09D] hover:text-[#C6CB14] transition-colors">&times;</button>
             </nav>
         </div>
@@ -258,7 +260,7 @@
         <div class="w-full relative">
             <img 
                 src="imges/gg.png" 
-                alt="A beautiful, responsive hero image" 
+                alt="美しくレスポンシブなヒーロー画像" 
                 class="w-full h-auto object-cover"
             >
             <div 
@@ -272,7 +274,7 @@
     <div id="quality" class="relative">
         <!-- Background image with low opacity overlay -->
         <div class="absolute inset-0">
-            <img src="https://images.theconversation.com/files/446280/original/file-20220214-25-1p2kbo4.jpg?ixlib=rb-4.1.0&rect=0%2C0%2C4288%2C2848&q=45&auto=format&w=926&fit=clip" alt="Olive oil background" class="w-full h-full object-cover">
+            <img src="https://images.theconversation.com/files/446280/original/file-20220214-25-1p2kbo4.jpg?ixlib=rb-4.1.0&rect=0%2C0%2C4288%2C2848&q=45&auto=format&w=926&fit=clip" alt="オリーブオイルの背景" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-[#1D1D13] opacity-90"></div>
         </div>
         
@@ -283,11 +285,11 @@
             <div class="relative h-[450px] sm:h-[550px] lg:h-full w-full max-w-md mx-auto">
                 <!-- Larger background image -->
                 <div class="absolute top-0 left-0 w-3/5 h-4/5 border-4 border-white rounded-lg">
-                    <img src="https://i.ibb.co/kgYvrdqt/c1d2623f-f952-4d8f-920d-b7f8b6eeec8c.png" alt="Three men talking in an olive grove" class="w-full h-full object-cover rounded-lg shadow-xl">
+                    <img src="https://i.ibb.co/kgYvrdqt/c1d2623f-f952-4d8f-920d-b7f8b6eeec8c.png" alt="オリーブ畑で話す3人の男性" class="w-full h-full object-cover rounded-lg shadow-xl">
                 </div>
                 <!-- Smaller foreground image -->
                 <div class="absolute bottom-0 right-0 w-1/2 h-3/5 border-4 border-white rounded-lg">
-                    <img src="https://i.ibb.co/pv2CDv3G/94378166-857d-4984-9a86-478e48bfdbf2.jpg" alt="Close-up of green olives on a branch" class="w-full h-full object-cover rounded-md shadow-2xl">
+                    <img src="https://i.ibb.co/pv2CDv3G/94378166-857d-4984-9a86-478e48bfdbf2.jpg" alt="枝になる緑のオリーブのクローズアップ" class="w-full h-full object-cover rounded-md shadow-2xl">
                 </div>
             </div>
 
@@ -297,29 +299,29 @@
                     WM TRADE SOLUTION
                 </h1>
                 <h2 class="font-serif-custom text-lg xs:text-2xl sm:text-3xl text-gray-100 leading-tight mt-2">
-                    ZeTna Extra Virgin Olive Oil
+                    ゼトナ エキストラバージンオリーブオイル
                 </h2>
                 <p class="mt-6 text-base sm:text-base text-gray-300">
-                    A Tunisian company specializing in the export of ZeTna extra virgin olive oil. Faithful to a thousand-year-old tradition, we offer an authentic oil from selected olive groves, controlled at every stage.
+                    ゼトナエキストラバージンオリーブオイルの輸出を専門とするチュニジアの会社です。千年の伝統に忠実に、厳選されたオリーブ畑で栽培され、すべての段階で管理された本物のオイルを提供しています。
                 </p>
                 <ul class="mt-4 text-sm sm:text-base text-gray-400 space-y-2 flex flex-col mx-auto" style="width: fit-content;">
                     <li class="flex items-start text-left">
                         <svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        Guaranteed premium quality
+                        保証されたプレミアム品質
                     </li>
                     <li class="flex items-start text-left">
                         <svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        Authentic Tunisian terroir
+                        本物のチュニジアのテロワール
                     </li>
                     <li class="flex items-start text-left">
                         <svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        Reliable international export
+                        信頼性の高い国際輸出
                     </li>
                 </ul>
                 <div class="flex justify-center mt-8">
@@ -329,7 +331,7 @@
                               <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                           </svg>
                       </span>
-                      Contact us to discover our products.
+                      製品についてはお問い合わせください。
                   </a>
                 </div>
             </div>
@@ -345,14 +347,14 @@
         <!-- Content container -->
         <div class="relative z-10 container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center mb-10">
-                <h2 class="font-serif-custom text-4xl sm:text-5xl font-bold text-white mb-4">About Us</h2>
+                <h2 class="font-serif-custom text-4xl sm:text-5xl font-bold text-white mb-4">会社概要</h2>
             </div>
             
             <div class="bg-white/90 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto">
-                <h3 class="font-serif-custom text-3xl font-bold text-[#184928] mb-5">Who Are We?</h3>
-                <p class="text-gray-700 text-base">Our company showcases the Tunisian terroir through a pure, natural, and aroma-rich olive oil.</p>
-                <p class="text-gray-700 mt-3 text-base">We control the entire value chain: from olive cultivation to export, including processing, quality analysis, packaging, and logistics.</p>
-                <p class="text-gray-700 mt-3 text-base">We work exclusively with local producers committed to responsible and environmentally friendly agriculture. Our cold extraction processes preserve all the nutritional and organoleptic properties of the oil.</p>
+                <h3 class="font-serif-custom text-3xl font-bold text-[#184928] mb-5">私たちについて</h3>
+                <p class="text-gray-700 text-base">当社は、純粋で自然、そして豊かな香りのオリーブオイルを通じてチュニジアのテロワールを紹介しています。</p>
+                <p class="text-gray-700 mt-3 text-base">オリーブの栽培から輸出、加工、品質分析、包装、物流まで、バリューチェーン全体を管理しています。</p>
+                <p class="text-gray-700 mt-3 text-base">私たちは、責任ある環境に優しい農業に取り組む地元の生産者とのみ協力しています。当社の低温抽出プロセスは、オイルのすべての栄養的および感覚的特性を保持します。</p>
             </div>
         </div>
     </div>
@@ -368,13 +370,13 @@
                 
                 <!-- Text Content -->
                 <h1 class="font-serif-custom text-5xl sm:text-6xl text-[#1D1D13] leading-tight font-bold break-words">
-                    Our Products – ZeTna Oil
+                    当社の製品 – ゼトナオイル
                 </h1>
                 <p class="mt-6 text-lg text-gray-700">
-                    ZeTna is more than just an olive oil: it is a concentrate of nature, tradition, and know-how. Our oil comes from native varieties grown in ideal climatic conditions.
+                    ゼトナは単なるオリーブオイルではありません。自然、伝統、ノウハウの濃縮です。当社のオイルは、理想的な気候条件で栽培された在来種から作られています。
                 </p>
                 <p class="mt-6 text-lg font-semibold text-[#1D1D13]">
-                    Available Formats<br>
+                    利用可能な形式<br>
                     <span class="text-2xl font-bold mt-2 block">250 ML / 500 ML / 1L / 5L</span>
                 </p>
 
@@ -383,43 +385,43 @@
                     
                     <!-- ZeTna Classic Card -->
                     <div class="bg-white/80 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
-                        <img src="https://dropinblog.net/34257837/files/featured/1.jpg" alt="Bottle of ZeTna Classic Olive Oil" class="rounded-lg w-full aspect-square object-cover mb-4">
-                        <h2 class="font-serif-custom text-3xl font-bold text-[#1D1D13]">ZeTna Classic</h2>
-                        <p class="mt-2 text-gray-600 text-base">Smooth and fruity, ideal for everyday use.</p>
+                        <img src="https://dropinblog.net/34257837/files/featured/1.jpg" alt="ゼトナ・クラシックオリーブオイルのボトル" class="rounded-lg w-full aspect-square object-cover mb-4">
+                        <h2 class="font-serif-custom text-3xl font-bold text-[#1D1D13]">ゼトナ・クラシック</h2>
+                        <p class="mt-2 text-gray-600 text-base">滑らかでフルーティー、日常使いに最適です。</p>
                     </div>
 
                     <!-- ZeTna Premium Card -->
                     <div class="bg-white/80 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
-                        <img src="https://cpimg.tistatic.com/10394204/b/4/Olive-Oil..jpg" alt="Bottle of ZeTna Premium Olive Oil" class="rounded-lg w-full aspect-square object-cover mb-4">
-                        <h2 class="font-serif-custom text-3xl font-bold text-[#1D1D13]">ZeTna Premium</h2>
-                        <p class="mt-2 text-gray-600 text-base">Robust and pungent, for connoisseurs.</p>
+                        <img src="https://cpimg.tistatic.com/10394204/b/4/Olive-Oil..jpg" alt="ゼトナ・プレミアムオリーブオイルのボトル" class="rounded-lg w-full aspect-square object-cover mb-4">
+                        <h2 class="font-serif-custom text-3xl font-bold text-[#1D1D13]">ゼトナ・プレミアム</h2>
+                        <p class="mt-2 text-gray-600 text-base">力強く刺激的で、通向けです。</p>
                     </div>
 
                     <!-- ZeTna Organic Card -->
                     <div class="bg-white/80 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
-                        <img src="https://oleumhistriae.com/wp-content/uploads/2023/11/prva-fotka.jpg" alt="Bottle of ZeTna Bio Olive Oil" class="rounded-lg w-full aspect-square object-cover mb-4">
-                        <h2 class="font-serif-custom text-3xl font-bold text-[#1D1D13]">ZeTna Organic</h2>
-                        <p class="mt-2 text-gray-600 text-base">From organic farming, free of chemical products.</p>
+                        <img src="https://oleumhistriae.com/wp-content/uploads/2023/11/prva-fotka.jpg" alt="ゼトナ・オーガニックオリーブオイルのボトル" class="rounded-lg w-full aspect-square object-cover mb-4">
+                        <h2 class="font-serif-custom text-3xl font-bold text-[#1D1D13]">ゼトナ・オーガニック</h2>
+                        <p class="mt-2 text-gray-600 text-base">化学製品を含まない有機農法から。</p>
                     </div>
 
                 </div>
 
                 <div class="mt-12 p-6 bg-white/80 rounded-2xl shadow-lg text-left w-full">
-                    <h3 class="font-serif-custom text-4xl font-bold text-[#184928] mb-5">Our Strengths:</h3>
+                    <h3 class="font-serif-custom text-4xl font-bold text-[#184928] mb-5">当社の強み：</h3>
                     <ul class="text-gray-700 space-y-3 text-base">
-                        <li>• Cold-pressed within 24 hours of harvest</li>
-                        <li>• Certified extra virgin with acidity ≤ 0.8% according to international standards</li>
-                        <li>• Rich in polyphenols, vitamin E, and antioxidants</li>
-                        <li>• Available in formats suitable for retail or export (glass bottles, tins)</li>
+                        <li>• 収穫後24時間以内に低温圧搾</li>
+                        <li>• 国際基準に従い、酸度≤0.8%のエキストラバージン認定</li>
+                        <li>• ポリフェノール、ビタミンE、抗酸化物質が豊富</li>
+                        <li>• 小売または輸出に適した形式で利用可能（ガラス瓶、缶）</li>
                     </ul>
                 </div>
                 
                 <div class="mt-8 p-6 bg-white/80 rounded-2xl shadow-lg text-left w-full">
-                    <h3 class="font-serif-custom text-4xl font-bold text-[#184928] mb-5">International Export</h3>
-                    <p class="text-gray-700 text-base font-medium">Dedicated Export Expertise</p>
-                    <p class="text-gray-700 mt-2 text-base">ZeTna exports Tunisian olive oil to over 20 countries worldwide. We adapt our packaging, certifications, and logistics processes to the requirements of each market.</p>
-                    <h4 class="font-semibold text-[#184928] text-2xl mt-5 mb-2">Our Main Markets:</h4>
-                    <p class="text-gray-700 text-base">Europe, Asia, North America, Middle East</p>
+                    <h3 class="font-serif-custom text-4xl font-bold text-[#184928] mb-5">国際輸出</h3>
+                    <p class="text-gray-700 text-base font-medium">専門の輸出ノウハウ</p>
+                    <p class="text-gray-700 mt-2 text-base">ゼトナはチュニジアのオリーブオイルを世界20カ国以上に輸出しています。各市場の要件に合わせて、パッケージ、認証、物流プロセスを適応させます。</p>
+                    <h4 class="font-semibold text-[#184928] text-2xl mt-5 mb-2">主な市場：</h4>
+                    <p class="text-gray-700 text-base">ヨーロッパ、アジア、北米、中東</p>
                 </div>
                 
                 <!-- Contact Link -->
@@ -429,7 +431,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </span>
-                    Contact us to discover our products.
+                    製品についてはお問い合わせください。
                 </a>
             </div>
         </div>
@@ -451,10 +453,10 @@
                 -->
                 <div class="w-full flex flex-col items-center text-center">
                     <h1 class="font-serif-custom text-5xl sm:text-6xl text-white leading-tight font-bold break-words">
-                        Awards Won by Our Olive Oil
+                        当社のオリーブオイルが受賞した賞
                     </h1>
                     <p class="mt-6 text-base text-gray-300">
-                        Each medal is a testament to our commitment to quality.
+                        各メダルは品質への私たちのコミットメントの証です。
                     </p>
 
                     <!-- Awards Cards -->
@@ -463,22 +465,22 @@
                         <!-- Award 1 -->
                         <div class="bg-green-900/80 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
                             <span class="text-4xl">🏅</span>
-                            <h2 class="font-serif-custom text-2xl font-medium text-gray-100 mt-2">2024 Gold Medal - International Olive Oil Competition</h2>
-                            <p class="mt-2 text-gray-300">Awarded for its excellent taste and exceptional quality.</p>
+                            <h2 class="font-serif-custom text-2xl font-medium text-gray-100 mt-2">2024年 金メダル - 国際オリーブオイルコンペティション</h2>
+                            <p class="mt-2 text-gray-300">優れた味と卓越した品質で受賞しました。</p>
                         </div>
 
                         <!-- Award 2 -->
                         <div class="bg-green-900/80 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
                             <span class="text-4xl">🥇</span>
-                            <h2 class="font-serif-custom text-2xl font-medium text-gray-100 mt-2">2023 Excellence Prize - International Agriculture Show</h2>
-                            <p class="mt-2 text-gray-300">Recognition for our traditional production methods.</p>
+                            <h2 class="font-serif-custom text-2xl font-medium text-gray-100 mt-2">2023年 優秀賞 - 国際農業ショー</h2>
+                            <p class="mt-2 text-gray-300">伝統的な製造方法が評価されました。</p>
                         </div>
 
                         <!-- Award 3 -->
                         <div class="bg-green-900/80 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center">
                             <span class="text-4xl">🥈</span>
-                            <h2 class="font-serif-custom text-2xl font-medium text-gray-100 mt-2">2022 Silver Medal - Mediterranean Olive Oil Competition</h2>
-                            <p class="mt-2 text-gray-300">Distinction for our premium extra virgin olive oil.</p>
+                            <h2 class="font-serif-custom text-2xl font-medium text-gray-100 mt-2">2022年 銀メダル - 地中海オリーブオイルコンペティション</h2>
+                            <p class="mt-2 text-gray-300">プレミアムエキストラバージンオリーブオイルが評価されました。</p>
                         </div>
 
                     </div>
@@ -492,7 +494,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </span>
-                    Contact us to discover our products.
+                    製品についてはお問い合わせください。
                 </a>
             </div>
         </div>
@@ -507,14 +509,14 @@
 
         <div class="max-w-6xl mx-auto relative z-10">
             <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-12 font-serif-custom">
-                Our Certifications
+                当社の認証
             </h2>
 
             <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10">
                 <!-- Image on the left for desktop -->
                 <div class="flex justify-center lg:justify-start w-full lg:w-1/2">
                     <img src="https://i.ibb.co/0R4GyzhG/4e3bbfb1-a4d3-4fd3-84a4-bc0d13f4e260.jpg"
-                        alt="Certifications background"
+                        alt="認証の背景"
                         class="w-64 md:w-80 lg:w-full max-w-md rounded-2xl object-contain">
                 </div>
 
@@ -523,7 +525,7 @@
                     <!-- Organic -->
                     <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                         <span class="text-green-600 text-2xl">✅</span>
-                        <p class="text-base font-medium text-gray-700">Organic</p>
+                        <p class="text-base font-medium text-gray-700">オーガニック</p>
                     </div>
                     
                     <!-- ISO 22000 -->
@@ -535,19 +537,19 @@
                     <!-- Health Certificate -->
                     <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                         <span class="text-green-600 text-2xl">✅</span>
-                        <p class="text-base font-medium text-gray-700">Health Certificate</p>
+                        <p class="text-base font-medium text-gray-700">衛生証明書</p>
                     </div>
                     
                     <!-- Certificate of Origin -->
                     <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                         <span class="text-green-600 text-2xl">✅</span>
-                        <p class="text-base font-medium text-gray-700">Certificate of Origin</p>
+                        <p class="text-base font-medium text-gray-700">原産地証明書</p>
                     </div>
                     
                     <!-- EU Organic Certificate -->
                     <div class="flex items-center gap-3 p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
                         <span class="text-green-600 text-2xl">✅</span>
-                        <p class="text-base font-medium text-gray-700">EU Organic Certificate</p>
+                        <p class="text-base font-medium text-gray-700">EUオーガニック認証</p>
                     </div>
                 </div>
             </div>
@@ -560,7 +562,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </span>
-                    Contact us to discover our products.
+                    製品についてはお問い合わせください。
                 </a>
             </div>
         </div>
@@ -571,26 +573,26 @@
         <div class="relative z-10 container mx-auto px-4 py-16 sm:py-24">
             <section class="contact-section">
                 <div class="contact-header">
-                  <h2>Contact Us</h2>
-                  <p>Feel free to contact us for any questions or quote requests. We are at your disposal to assist you.</p>
+                  <h2>お問い合わせ</h2>
+                  <p>ご質問や見積もりのご依頼は、お気軽にお問い合わせください。サポートさせていただきます。</p>
                 </div>
 
                 <div class="contact-info">
                   <div class="info-box">
                     <div class="icon">📧</div>
-                    <h3>Email</h3>
+                    <h3>Eメール</h3>
                     <a href="mailto:contact@wm-tradion.com">contact@wm-tradion.com</a>
                   </div>
                   <div class="info-box">
                     <div class="icon">📞</div>
-                    <h3>Phone</h3>
+                    <h3>電話</h3>
                     <a href="tel:+21624628534">+216 24 628 534</a>
                   </div>
                   <div class="info-box">
                     <div class="icon">📍</div>
-                    <h3>Address</h3>
-                    <p>Block A — 3rd Floor, Office A1<br/>Henda Building 10, Rue l'Île de Rhodes<br/>1053 Les Berges du Lac 2</p>
-                    <a href="https://www.google.com/maps/search/WM+Tradion+Les+Berges+du+Lac+2,+Tunis/@36.8560347,10.2712397,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">View on Google Maps</a>
+                    <h3>住所</h3>
+                    <p>ブロックA — 3階、オフィスA1<br/>ヘンダビル10、ロードス島通り<br/>1053 レ・ベルジュ・デュ・ラック 2</p>
+                    <a href="https://www.google.com/maps/search/WM+Tradion+Les+Berges+du+Lac+2,+Tunis/@36.8560347,10.2712397,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Googleマップで見る</a>
                   </div>
                 </div>
 
